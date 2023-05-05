@@ -12,64 +12,68 @@
 
 <body>
 
-    <form action="https://httpbin.org/post" method="POST" >
+    <form action="https://httpbin.org/post" method="POST">
 
+        <input type="hidden" value="s-500" name="product">
         <div>
             <label for="adi">adı soyadı</label>
-            <input id="adi" type="text">
+            <input name="adi" required id="adi" type="text">
         </div>
 
 
         <div>
             <label for="tel">telefon</label>
-            <input name="adi" id="tel" type="tel"  value="05467386418">
+            <input name="tel" id="tel" type="tel" value="053724823">
         </div>
 
 
 
         <div>
             <label for="email">email</label>
-            <input name="email" id="email" type="email">
+            <input required name="email" id="email" type="email">
         </div>
 
 
         <div>
             <label for="mesaj">mesaj</label>
-            <textarea name="mesaj" id="mesaj" cols="30" rows="5"></textarea>
+            <textarea name="mesaj" id="mesaj" rows="5"></textarea>
         </div>
 
 
         <div>
             <label for="sehir">yaşadığı şehir</label>
             <select name="sehir" id="sehir">
-                <option value="">tavşanlı</option>
-                <option value="">emet</option>
-                <option value="">hisarcık</option>
-                <option value="">simav</option>
+                <option value="43">tavşanlı</option>
+                <option value="43.1">emet</option>
+                <option selected value="43.2">hisarcık</option>
+                <option value="43.3">simav</option>
 
             </select>
         </div>
 
 
 
-    <div>
+        <div>
 
-<label for="renk">sevdiğiniz renk</label>
+            <p>sevdiğiniz renk</p>
+            <label><input type="radio" name="renk" value="sari">sarı
 
-<input type="radio"  name="renk" value="sari">sarı
-<input type="radio"   name="renk" value="lacivert">lacivert
+            </label>
+            <label>
+                <input checked type="radio" name="renk" value="lacivert">lacivert
+            </label>
 
-    </div>
-
-
-
-<div>
-    
-<button class="buttons" type="reset" >sıfırla</button>
-<button  type="submit" >gönder</button>
+        </div>
 
 
-</div>
+
+        <div class="buttons">
+
+            <button type="reset">sıfırla</button>
+            <button type="submit">gönder</button>
+
+
+        </div>
 
 
 
